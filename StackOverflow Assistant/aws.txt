@@ -1,0 +1,18 @@
+
+
+
+
+
+ssh -L 8080:localhost:8080 -i "firstkeypair.pem" ubuntu@ec2-13-233-34-176.ap-south-1.compute.amazonaws.com
+
+
+
+
+docker run -it -p 8080:8080  -v "$(pwd)":/src akashin/coursera-aml-nlp
+
+scp -i "firstkeypair.pem" dialogue_manager.py ubuntu@ec2-13-234-34-57.ap-south-1.compute.amazonaws.com:remote
+
+python3 main_bot.py --token='1223275699:AAE1FU1BUv-8e9SXG305YlaBIh6yclLhXns'
+
+pip3 uninstall scikit-learn
+pip3 install -U scikit-learn

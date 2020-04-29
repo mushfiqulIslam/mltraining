@@ -1,0 +1,9 @@
+After submitting the first submission with all ones we got around 50% accuracy. But when we look at the number of all possible pairs we realise that it is much larger compared to the number of pairs we were given. The last two observations can tell us that there is an algorithm by which the sampling of pairs was done. With this we try to build a incident matrix and find similarities between the incident matrix representations of each object.
+
+The test was about working with id's and building the magic feature. The threshold I chose was 19, having an accuracy of 99,8%
+
+
+We can get such predictions, because we have a set of pairs, that is not random. There is a lot of duplicates. And if we build a connectivity matrix (such as in Quora competition example), we'll find that some rows are very similar (we could use cosine similarity to compare vectors, for example). We can think of the rows in this matrix as of representations for the objects. So if rows is similar, then probably images with indices of this rows - duplicates.
+
+First of all, we can see that our test set was small. We worked with ID's and then We built magic feature, then choose threshold. I choose threshold 19 randomly.
+
